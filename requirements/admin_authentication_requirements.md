@@ -7,6 +7,7 @@ This document describes authentication and access control requirements for the L
 ## Preconditions
 
 - At least one administrator account exists in the system.
+- The administrator account is active and not locked.
 
 ## Requirements
 
@@ -60,7 +61,23 @@ Priority: High
 
 ---
 
-### REQ-ADMIN-AUTH-006 — Logout
+### REQ-ADMIN-AUTH-006 — Username case sensitivity
+
+The system shall treat the administrator username as case-insensitive.
+
+The administrator shall be able to log in when the username is entered using a different letter case, provided that the password is valid.
+
+Priority: Medium
+
+### REQ-ADMIN-AUTH-007 — Failed login attempts limit
+
+The system shall temporarily lock the administrator account after three consecutive failed login attempts.
+
+The locked account shall not be able to log in until the lock period expires or the account is unlocked.
+
+Priority: High
+
+### REQ-ADMIN-AUTH-008 — Logout
 
 The system shall allow an authenticated administrator to log out.
 
@@ -68,10 +85,10 @@ After logout, the administrator shall no longer have access to protected Admin P
 
 Priority: High
 
-## Open Questions
+### Open Questions
 
-### OQ-ADMIN-AUTH-001 — Username case sensitivity
+OQ-ADMIN-AUTH-001 — Account lock duration
 
-It is currently unclear whether the administrator username is case-sensitive or case-insensitive.
+The duration of the temporary account lock after three failed login attempts is currently unknown.
 
 Status: To be verified
