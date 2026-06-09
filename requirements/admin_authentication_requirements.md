@@ -77,7 +77,15 @@ The locked account shall not be able to log in until the lock period expires or 
 
 Priority: High
 
-### REQ-ADMIN-AUTH-008 — Logout
+### REQ-ADMIN-AUTH-008 — Failed login attempts reset after successful login
+
+The system shall reset the failed login attempts counter after a successful login.
+
+If an administrator enters invalid credentials and then successfully logs in with valid credentials, previous failed attempts shall not be counted toward the next account lock.
+
+Priority: High
+
+### REQ-ADMIN-AUTH-009 — Logout
 
 The system shall allow an authenticated administrator to log out.
 
