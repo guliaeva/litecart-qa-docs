@@ -75,7 +75,7 @@ Priority: High
 
 ---
 
-### REQ-ADMIN-AUTH-010 — Remember me authentication persistence
+### REQ-ADMIN-AUTH-009 — Remember me authentication persistence
 
 The system shall keep the administrator authenticated after the browser session is closed if the "Remember me" option was selected during login.
 The remembered authentication shall remain active until the administrator explicitly logs out or until the remember-me session expires according to the application session policy.
@@ -90,7 +90,21 @@ Protected internal Admin Panel URLs remain accessible without a new login until 
 
 ---
 
-### REQ-ADMIN-AUTH-009 — Logout
+### REQ-ADMIN-AUTH-010 — Remember me session duration
+
+The system shall keep the administrator authenticated for a defined extended period when the "Remember me" option is selected during login.
+
+The remembered authentication shall remain active until one of the following events occurs:
+
+- the administrator explicitly logs out;
+- the remember-me session expires according to the application session policy;
+- the browser cookies for the application are cleared.
+
+Priority: Medium
+
+---
+
+### REQ-ADMIN-AUTH-0100 — Logout
 
 The system shall allow an authenticated administrator to log out.
 After logout, the administrator shall no longer have access to protected Admin Panel pages without logging in again.
@@ -100,8 +114,16 @@ Priority: High
 
 ### Open Questions
 
-OQ-ADMIN-AUTH-001 — Account lock duration
+### OQ-ADMIN-AUTH-001 — Account lock duration
 The duration of the temporary account lock after three failed login attempts is currently unknown.
+Status: To be verified
+
+---
+
+### OQ-ADMIN-AUTH-001 — Remember me session duration
+
+The exact duration of the remembered authentication session is currently unknown.
+
 Status: To be verified
 
 
