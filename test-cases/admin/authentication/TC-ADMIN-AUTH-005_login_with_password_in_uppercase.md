@@ -1,7 +1,7 @@
-## TC-ADMIN-AUTH-004 — Login with invalid password
+## TC-ADMIN-AUTH-005 — Login with password in uppercase
 
-**Requirement:** REQ-ADMIN-AUTH-004
-**Priority:** High
+**Requirement:** REQ-ADMIN-AUTH-006
+**Priority:** Medium
 **Type:** Negative
 **Automation status:** Planned
 
@@ -10,13 +10,14 @@
 * An active, unlocked administrator account exists.
 * Valid administrator credentials are available.
 * The administrator is logged out.
-* The valid administrator password is not `wr0ngP@ssword`.
+* The valid administrator password contains lowercase letters.
+* The valid administrator password entered in uppercase is not equal to the actual password.
 * The `login_attempt` counter is reset before the test.
 
 ## Test Data
 
 * Username: valid administrator username
-* Password: `wr0ngP@ssword`
+* Password: valid administrator password entered in uppercase
 * Remember me: not selected
 
 ## Steps
@@ -31,7 +32,7 @@
    * The username field is editable.
    * The entered username is displayed in the field.
 
-3. Enter `wr0ngP@ssword` in the password field.
+3. Enter the valid administrator password in uppercase.
 
    * The password field is editable.
    * The entered password is masked.
@@ -55,3 +56,4 @@
 
 * Perform a successful login with valid administrator credentials to reset the failed login attempts counter.
 * Log out from the Admin Panel.
+
