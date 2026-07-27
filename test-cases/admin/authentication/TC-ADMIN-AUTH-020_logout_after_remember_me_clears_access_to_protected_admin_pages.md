@@ -1,4 +1,4 @@
-# TC-ADMIN-AUTH-018: Log out after using “Remember me” and verify that protected Admin Panel pages are no longer accessible
+# TC-ADMIN-AUTH-020: Log out after using “Remember me” and verify that protected Admin Panel pages are no longer accessible
 
 ## Requirement
 

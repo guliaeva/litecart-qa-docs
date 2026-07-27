@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-010 - First failed login attempt
+## TC-ADMIN-AUTH-012 — Second consecutive failed login attempt
 
 **Requirement:** REQ-ADMIN-AUTH-007
 **Priority:** High
@@ -13,7 +13,7 @@
 * The valid password for `admin_for_locking` is not `wr0ngP@ssword`.
 * The administrator is logged out.
 * Database access is available.
-* Before executing the test, the following query returns `0`:
+* Before executing the test, the following query returns `1`:
 
 ```sql
 SELECT `login_attempts`
@@ -53,8 +53,8 @@ WHERE `username` = 'admin_for_locking';
 * The administrator is not logged in.
 * The Admin Login page remains displayed.
 * Access to the Admin Panel is not granted.
-* The following message is displayed: "You have 2 login attempts left until your account is temporarily blocked".
-* The following database query returns `1`:
+* The following message is displayed: "You have 1 login attempt left until your account is temporarily blocked".
+* The following database query returns `2`:
 
 ```sql
 SELECT `login_attempts`

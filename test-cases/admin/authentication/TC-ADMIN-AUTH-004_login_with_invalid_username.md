@@ -1,4 +1,4 @@
-# TC-ADMIN-AUTH-003 — Login with invalid username
+# TC-ADMIN-AUTH-004 — Login with invalid username
 
 **Requirement:** REQ-ADMIN-AUTH-004  
 **Priority:** High  
@@ -42,7 +42,7 @@
 - The administrator is not logged in.
 - The Admin Login page remains displayed.
 - Access to the Admin Panel is not granted.
-- The following message is displayed: "You have 2 login attempts left until your account is temporarily blocked".
+- The following message is displayed: "The user could not be found in our database".
 
 ## Additional Verification
 

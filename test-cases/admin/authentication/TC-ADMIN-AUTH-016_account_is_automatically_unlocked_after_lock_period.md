@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-015 — Account is automatically unlocked after lock period
+## TC-ADMIN-AUTH-016 — Account is automatically unlocked after lock period
 
 **Requirement:** REQ-ADMIN-AUTH-007
 **Priority:** High

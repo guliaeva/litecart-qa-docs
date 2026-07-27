@@ -1,7 +1,7 @@
-## TC-ADMIN-AUTH-006 — Login with username in incorrect keyboard layout
+## TC-ADMIN-AUTH-005 — Login with invalid password
 
 **Requirement:** REQ-ADMIN-AUTH-004
-**Priority:** Low
+**Priority:** High
 **Type:** Negative
 **Automation status:** Planned
 
@@ -10,13 +10,13 @@
 * An active, unlocked administrator account exists.
 * Valid administrator credentials are available.
 * The administrator is logged out.
-* The username entered using an incorrect keyboard layout is not equal to any existing administrator username.
+* The valid administrator password is not `wr0ngP@ssword`.
 * The `login_attempt` counter is reset before the test.
 
 ## Test Data
 
-* Username: valid administrator username entered using an incorrect keyboard layout
-* Password: valid administrator password
+* Username: valid administrator username
+* Password: `wr0ngP@ssword`
 * Remember me: not selected
 
 ## Steps
@@ -26,12 +26,12 @@
    * The Admin Login page is displayed.
    * The login form is displayed.
 
-2. Enter the valid administrator username using an incorrect keyboard layout.
+2. Enter the valid administrator username.
 
    * The username field is editable.
    * The entered username is displayed in the field.
 
-3. Enter the valid administrator password.
+3. Enter `wr0ngP@ssword` in the password field.
 
    * The password field is editable.
    * The entered password is masked.

@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-014 — Login with valid credentials while account is locked
+## TC-ADMIN-AUTH-015 — Login with valid credentials while account is locked
 
 **Requirement:** REQ-ADMIN-AUTH-007  
 **Priority:** High  

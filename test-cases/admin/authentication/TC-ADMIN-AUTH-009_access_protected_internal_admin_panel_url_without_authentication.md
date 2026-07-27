@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-008 — Access protected internal Admin Panel URL without authentication
+## TC-ADMIN-AUTH-009 — Access protected internal Admin Panel URL without authentication
 
 **Requirement:** REQ-ADMIN-AUTH-001, REQ-ADMIN-AUTH-002
 **Priority:** High

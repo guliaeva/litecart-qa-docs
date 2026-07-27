@@ -1,10 +1,8 @@
-# TC-ADMIN-AUTH-017: Open the Admin Login page with an active remembered session
+# TC-ADMIN-AUTH-018: Access a protected internal Admin Panel URL after closing and reopening the browser with “Remember me”
 
-## Requirement
-
-**Requirement:** REQ-ADMIN-AUTH-009  
-**Priority:** High  
-**Type:** Positive  
+**Requirement:** REQ-ADMIN-AUTH-009
+**Priority:** High
+**Type:** Positive
 **Automation status:** Planned
 
 ## Preconditions
@@ -18,7 +16,7 @@
 * Username: valid administrator username
 * Password: valid administrator password
 * Remember me: selected
-* Admin URL: `/admin/`
+* Protected internal Admin Panel URL: `/admin/?app=currencies&doc=currencies
 
 ## Steps
 
@@ -64,17 +62,18 @@
    * The browser is closed.
    * The administrator does not explicitly log out.
 
-7. Reopen the browser and navigate to `/admin/`.
+7. Reopen the browser and navigate directly to a protected internal Admin Panel URL.
 
    **Expected result:**
 
-   * The Admin Login page is displayed.
+   * The requested protected Admin Panel page is opened.
+   * The current page is the Currencies page.
+   * The administrator is not redirected to the Login page.
    * A message is displayed indicating that the administrator is already logged in.
-   * The login form is displayed.
 
 ## Expected Result
 
-When an administrator opens `/admin/` with an active remembered session, the Admin Login page is displayed with a message indicating that the administrator is already logged in.
+After logging in with “Remember me” selected and closing the browser without logging out, the administrator can open a protected internal Admin Panel URL in a new browser session without logging in again.
 
 ## Postconditions
 

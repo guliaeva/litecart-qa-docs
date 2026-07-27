@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-002 — Login with username in uppercase
+## TC-ADMIN-AUTH-003 — Login with username in uppercase
 
 **Requirement:** REQ-ADMIN-AUTH-005  
 **Priority:** Medium  
@@ -38,6 +38,6 @@
 ### Expected Result
 
 - The administrator is logged in successfully.
-- A success message is displayed: "You are now logged in as admin".
+- A success message is displayed: “You are now logged in as %administrator username%”
 - The Admin Panel main page is displayed.
 - The statistics section is displayed.

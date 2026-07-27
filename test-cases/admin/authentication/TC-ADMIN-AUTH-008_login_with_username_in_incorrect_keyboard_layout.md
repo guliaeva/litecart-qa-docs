@@ -1,7 +1,7 @@
-## TC-ADMIN-AUTH-005 — Login with password in uppercase
+## TC-ADMIN-AUTH-008 — Login with username in incorrect keyboard layout
 
-**Requirement:** REQ-ADMIN-AUTH-006
-**Priority:** Medium
+**Requirement:** REQ-ADMIN-AUTH-004
+**Priority:** Low
 **Type:** Negative
 **Automation status:** Planned
 
@@ -10,14 +10,13 @@
 * An active, unlocked administrator account exists.
 * Valid administrator credentials are available.
 * The administrator is logged out.
-* The valid administrator password contains lowercase letters.
-* The valid administrator password entered in uppercase is not equal to the actual password.
+* The username entered using an incorrect keyboard layout is not equal to any existing administrator username.
 * The `login_attempt` counter is reset before the test.
 
 ## Test Data
 
-* Username: valid administrator username
-* Password: valid administrator password entered in uppercase
+* Username: valid administrator username entered using an incorrect keyboard layout
+* Password: valid administrator password
 * Remember me: not selected
 
 ## Steps
@@ -27,12 +26,12 @@
    * The Admin Login page is displayed.
    * The login form is displayed.
 
-2. Enter the valid administrator username.
+2. Enter the valid administrator username using an incorrect keyboard layout.
 
    * The username field is editable.
    * The entered username is displayed in the field.
 
-3. Enter the valid administrator password in uppercase.
+3. Enter the valid administrator password.
 
    * The password field is editable.
    * The entered password is masked.
@@ -46,7 +45,7 @@
 * The administrator is not logged in.
 * The Admin Login page remains displayed.
 * Access to the Admin Panel is not granted.
-* The following message is displayed: "You have 2 login attempts left until your account is temporarily blocked".
+* The following message is displayed: "The user could not be found in our database".
 
 ## Additional Verification
 
@@ -56,4 +55,3 @@
 
 * Perform a successful login with valid administrator credentials to reset the failed login attempts counter.
 * Log out from the Admin Panel.
-

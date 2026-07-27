@@ -1,4 +1,4 @@
-# TC-ADMIN-AUTH-019: Clear browser cookies after using “Remember me” and verify that protected Admin Panel pages are no longer accessible
+# TC-ADMIN-AUTH-021: Clear browser cookies after using “Remember me” and verify that protected Admin Panel pages are no longer accessible
 
 ## Requirement
 

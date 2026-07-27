@@ -1,8 +1,8 @@
-## TC-ADMIN-AUTH-011 — Second consecutive failed login attempt
+## TC-ADMIN-AUTH-013 — Login successfully after two consecutive failed login attempts
 
-**Requirement:** REQ-ADMIN-AUTH-007
+**Requirement:** REQ-ADMIN-AUTH-007, REQ-ADMIN-AUTH-008
 **Priority:** High
-**Type:** Negative
+**Type:** Positive
 **Automation status:** Planned
 
 ## Preconditions
@@ -10,10 +10,9 @@
 * A dedicated administrator account for account lock testing exists.
 * The dedicated administrator username is `admin_for_locking`.
 * Valid credentials for `admin_for_locking` are available.
-* The valid password for `admin_for_locking` is not `wr0ngP@ssword`.
 * The administrator is logged out.
 * Database access is available.
-* Before executing the test, the following query returns `1`:
+* Before executing the test, the following query returns `2`:
 
 ```sql
 SELECT `login_attempts`
@@ -24,7 +23,7 @@ WHERE `username` = 'admin_for_locking';
 ## Test Data
 
 * Username: `admin_for_locking`
-* Password: `wr0ngP@ssword`
+* Password: valid administrator password
 * Remember me: not selected
 
 ## Steps
@@ -39,7 +38,7 @@ WHERE `username` = 'admin_for_locking';
    * The username field is editable.
    * The entered username is displayed in the field.
 
-3. Enter `wr0ngP@ssword` in the password field.
+3. Enter the valid administrator password.
 
    * The password field is editable.
    * The entered password is masked.
@@ -50,11 +49,11 @@ WHERE `username` = 'admin_for_locking';
 
 ## Expected Result
 
-* The administrator is not logged in.
-* The Admin Login page remains displayed.
-* Access to the Admin Panel is not granted.
-* The following message is displayed: "You have 1 login attempt left until your account is temporarily blocked".
-* The following database query returns `2`:
+* The administrator is logged in successfully.
+* A success message is displayed: "You are now logged in as admin".
+* The Admin Panel main page is displayed.
+* The statistics section is displayed.
+* The following database query returns `0`:
 
 ```sql
 SELECT `login_attempts`
@@ -64,6 +63,4 @@ WHERE `username` = 'admin_for_locking';
 
 ## Postconditions / Cleanup
 
-* Perform a successful login with valid credentials for `admin_for_locking` to reset the failed login attempts counter.
 * Log out from the Admin Panel.
-* Optionally verify in the database that `login_attempts` is reset to `0`.

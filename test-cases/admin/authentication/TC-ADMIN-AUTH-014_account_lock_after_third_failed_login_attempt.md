@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-013 — Account lock after third consecutive failed login attempt
+## TC-ADMIN-AUTH-014 — Account lock after third consecutive failed login attempt
 
 **Requirement:** REQ-ADMIN-AUTH-007
 **Priority:** High

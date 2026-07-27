@@ -1,4 +1,4 @@
-## TC-ADMIN-AUTH-009 — Redirect to originally requested protected Admin Panel URL after successful login
+## TC-ADMIN-AUTH-010 — Redirect to originally requested protected Admin Panel URL after successful login
 
 **Requirement:** REQ-ADMIN-AUTH-002, REQ-ADMIN-AUTH-003
 **Priority:** High
@@ -45,7 +45,7 @@
 ## Expected Result
 
 * The administrator is logged in successfully.
-* A success message is displayed: "You are now logged in as admin".
+* A success message is displayed: "You are now logged in as %administrator username%".
 * The originally requested protected Admin Panel page is displayed.
 * The current page is the Currencies page.
 * The current URL corresponds to `/admin/?app=currencies&doc=currencies`.
