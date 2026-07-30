@@ -1,4 +1,4 @@
-# TC-ADMIN-AUTH-019: Open the Admin Login page with an active remembered session
+# TC-ADMIN-AUTH-019: Open the Admin Login page while already authenticated with remembered session
 
 ## Requirement
 
@@ -18,7 +18,7 @@
 * Username: valid administrator username
 * Password: valid administrator password
 * Remember me: selected
-* Admin URL: `/admin/`
+* Admin URL: `/admin/login.php`
 
 ## Steps
 
@@ -64,18 +64,21 @@
    * The browser is closed.
    * The administrator does not explicitly log out.
 
-7. Reopen the browser and navigate to `/admin/`.
+7. Reopen the browser and navigate to `/admin/login.php`.
 
    **Expected result:**
 
+   * The administrator is not automatically redirected to the Admin Panel main page.
    * The Admin Login page is displayed.
    * A message is displayed indicating that the administrator is already logged in.
    * The login form is displayed.
 
 ## Expected Result
 
-When an administrator opens `/admin/` with an active remembered session, the Admin Login page is displayed with a message indicating that the administrator is already logged in.
+When an administrator opens `/admin/login.php` with an active remembered session, the Admin Login page is displayed with a message indicating that the administrator is already logged in.
 
 ## Postconditions
 
+* Open any protected internal Admin Panel page that is accessible through the active remembered session.
 * Log out from the Admin Panel.
+* Verify that protected internal Admin Panel pages are no longer accessible without a new login.
